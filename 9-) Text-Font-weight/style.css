@@ -1,0 +1,43 @@
+.paragraf1 {
+    font-weight: 100;
+}
+
+.paragraf2 {
+    font-weight: 400;
+}
+
+.paragraf3 {
+    font-weight: 900;
+}
+
+.paragraf4 {
+    font-weight: bold;
+}
+
+.paragraf5 {
+    font-weight: bolder;
+}
+
+.paragraf6 {
+    font-weight: lighter;
+}
+
+.paragraf7 {
+    font-weight: normal;
+}
+
+div {
+    font-weight: bold;
+}
+
+.paragraf8 {
+    font-weight: inherit;
+}
+
+.paragraf9 {
+    font-weight: initial;
+}
+
+.paragraf10 {
+    font-weight: unset;
+}

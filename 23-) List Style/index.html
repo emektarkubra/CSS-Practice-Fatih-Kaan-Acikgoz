@@ -1,0 +1,105 @@
+<!-- 
+    ul {list-style-type: ;} 
+
+        lower-alpha     -> küçük harf
+        lower-greek     -> alfa, beta
+        lower-latin     -> latin harfler (küçük harf)
+        lower-roman     -> roman rakamı
+        upper-alpha     -> büyük harf
+        upper-latin     -> latin harfler (büyük harf)
+        upper-roman     -> roman rakamı (büyük)
+        circle          -> çember
+        square          -> kare
+        decimal         -> sayı
+
+    Resim koyma
+
+        list-style-image:url(img/coder.jpeg);
+        list-style-position: ;
+        inside
+        outside
+
+
+    *Eğer fotoğraf kendimiz ayarlayalım istiyorsak
+
+    .list1 {
+        list-style: none;
+        }
+
+    .list1 li::before {
+        content:"";
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+         background-image: url(img/coder.jpeg);
+         background-size: 20px;
+        }
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list1 {
+            list-style: none;
+        }
+
+        .list1 li::before {
+            content: "";
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            background-image: url(img/coder.jpeg);
+            background-size: 20px;
+        }
+
+        .list2 {
+            list-style-type: square;
+            list-style-position: inside;
+        }
+
+        .list3 {
+            list-style-type: circle;
+            list-style-position: inside;
+        }
+
+        .list4 {
+            list-style: decimal inside none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="list1"> Liste 1
+        <li>Eleman 1</li>
+        <li>Eleman 2</li>
+        <li>Eleman 3</li>
+    </ul>
+
+    <ul class="list2"> Liste 2
+        <li>Eleman 1</li>
+        <li>Eleman 2</li>
+        <li>Eleman 3</li>
+    </ul>
+
+    <ul class="list3"> Liste 3
+        <li>Eleman 1</li>
+        <li>Eleman 2</li>
+        <li>Eleman 3</li>
+    </ul>
+
+    <ul class="list4"> Liste 4
+        <li>Eleman 1</li>
+        <li>Eleman 2</li>
+        <li>Eleman 3</li>
+    </ul>
+</body>
+
+</html>

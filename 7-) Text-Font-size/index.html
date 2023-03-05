@@ -1,0 +1,96 @@
+<!-- 
+    Font-size 
+        -px
+        -em
+        -rem  (root em)
+
+    *Sayfa kaynağında font-size 2 katını alır (DİKKAT)
+    *1 em -> etiketin parent'ı (yani içinde olduğu bir üst etiket) onun font-size'ını alır
+    *1 rem -> etiketin root'u (yani kökü) hangisiyse onun font-size'ını alır 
+        (html'e gider. Defaultta html font-size:16px)
+
+    Mesela;
+        1.25rem demek html'in (kökün) 1.25 katı font-size al
+        1.1rem demek 1.1 katı font-size al demek
+
+    *em ve rem başka özelliklerde de kullanılabilir.(ANCAK font-size'a göre)
+        Mesela; html font-size 16px ve div1'in height'i 48px ise -> 3rem yazılabilir.
+
+    AYRICA
+
+    p {
+            font-size: xx-small;  /* 9px */   - SAYFANIN KAYNAĞINDAN GÖREBİLİRSİN
+            font-size: x-small;   /* 9px */
+            font-size: smaller;   /* 10px - html'in font-size'ından daha fazla olsun */
+            font-size: small;     /* 10px */
+            font-size: medium;    /* 12px */
+            font-size: large;     /* 14px */
+            font-size: larger;    /* 14.4px - html'in font-size'ından daha az olsun*/
+            font-size: x-large;   /* 18px */
+            font-size: xx-large;  /* 24px */
+            
+    }
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 20px;
+        }
+
+        div {
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        .div1 {
+            background-color: red;
+            height: 10rem;
+            font-size: 50px;
+        }
+
+        .div2 {
+            background-color: yellow;
+            height: 5rem;
+            /* (?????????????????????????????????????????????????????????????????????????????????????????????????????????????????) */
+        }
+
+        .div3 {
+            background-color: darkblue;
+            height: 2.5rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    Kaan Academy 1
+    <div>Kaan Academy 2
+        <p>Kaan Academy 3</p>
+    </div>
+
+    <br><br>
+
+    <div class="div1">
+        <div class="div2">
+            <div class="div3">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!-- 
+    Horizontal-align
+
+        p {text-align: ;}
+            center  -> merkez
+            left    -> sola
+            right   -> sağa
+            justify -> sağ ve sola yasla
+            inherit -> parent'tan alır
+            initial -> defaulttaki
+            end     -> sağa
+            start   -> sola
+
+    Vertical-align
+
+        p {
+            display: table-cell;
+            vertical-align: middle;
+        }
+            middle      -> orta
+            bottom      -> alt
+            top         -> üst
+            sub         -> biraz aşağı
+            super       -> biraz yukarı
+            text-bottom -> textin biraz altına
+            text-top    -> textin biraz üstüne
+            baseline    -> normal görünüm
+            initial
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            border: 1px solid red;
+            height: 300px;
+        }
+
+        .uzunmetin1 {
+            text-align: justify;
+        }
+
+        .kisametin {
+            text-align: start;
+        }
+
+        .uzunmetin2 {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .kisametin2 {
+            display: table-cell;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="uzunmetin1">
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor sit amet, consectetur adipisicing.
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor sit amet, consectetur adipisicing.
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor sit amet, consectetur adipisicing.
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor sit amet, consectetur adipisicing.
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor sit amet, consectetur adipisicing.
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor sit amet, consectetur adipisicing.
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor sit amet, consectetur adipisicing.
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor sit amet, consectetur adipisicing.
+    </p>
+
+    <p class="kisametin">Lorem ipsum dolor sit amet.</p>
+
+    <p class="uzunmetin2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor sit, amet consectetur adipisicing.
+        Lorem ipsum, dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor, sit amet consectetur adipisicing.
+        Lorem ipsum, dolor sit amet consectetur adipisicing.
+        Lorem, ipsum dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor sit, amet consectetur adipisicing.
+        Lorem ipsum, dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor, sit amet consectetur adipisicing.
+        Lorem ipsum, dolor sit amet consectetur adipisicing.
+        Lorem, ipsum dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor sit, amet consectetur adipisicing.
+        Lorem ipsum, dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor, sit amet consectetur adipisicing.
+        Lorem ipsum, dolor sit amet consectetur adipisicing.
+        Lorem, ipsum dolor sit amet consectetur adipisicing.
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+    </p>
+
+    <p class="kisametin2">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+
+</body>
+
+</html>

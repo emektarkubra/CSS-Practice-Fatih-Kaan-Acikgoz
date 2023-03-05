@@ -1,0 +1,144 @@
+<!-- 
+    SELECTORS
+
+        (W3 School Pseudo-element)
+
+            p::first-letter {}  -> p etiketindeki ilk harf seçilir
+            p::first-line {}    -> p etiketindeki ilk satır seçilir
+            p::before {}        -> paragrafın önüne ekle
+            p::after {}         -> paragrafın sonrasına ekle
+
+        (W3 School Pseudo-class)
+
+            a:link {}           -> linke stil ekleme
+            a:hover {}          -> linkin üzerine geldiğimizdeki stil
+            a:active {}         -> linke tıklandığı andaki stil 
+            a:visited {}        -> linke tıklandıktan sonraki stil
+
+            *Alttaki çizgiyi kaldırmak için   ->    text-decoration: none;
+
+        (W3 Attribute Selector)
+
+            img[title="bir kadin"] {}     ->      title'ı bir kadın olan resmi seçer (başka attribute'a göre de olabilir)
+            p[title^="bu"] {}             ->      title başında bu geçen paragrafları seçer
+            p[title $="paragraf"] {}      ->      title sonunda paragraf geçen paragrafları seçer
+            p[title ~="paragraf"] {}      ->      title içinde paragraf olanları seçer
+            a[href="https://www.google.com"]:visited {}             -> href'i olan ve tıklanmış olanı seçer
+            a[target="_blank"] {}                                   -> target'ı _blank olanı seçer
+            a[href="https://www.google.com"] [target="_blank"] {}   ->  hem href', olan hem de target' _blank olanı seçer
+
+
+            *border: 1px solid black
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /***************************** Pseudo-element  *****************************/
+
+        p::first-line {
+            color: red;
+            background-color: yellow;
+        }
+
+        p {
+            color: blue;
+        }
+
+        p::before {
+            content: "Naber!!!!"
+        }
+
+        /***************************** Pseudo-class *******************************/
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link {
+            color: turquoise;
+        }
+
+        a:hover {
+            color: red;
+            font-size: 30px;
+            background-color: gray;
+            text-decoration: none;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        a:visited {
+            color: green;
+        }
+
+        /***************************** Attribute Selector **********************************/
+
+        img[title="bir kadin"] {
+            border: 5px solid black
+        }
+
+        p[title^="bu"] {
+            color: red;
+        }
+
+        p[title $="paragraf"] {
+            color: blue;
+        }
+
+        p[title~="paragraf"] {
+            color: purple;
+        }
+
+        a[href="https://www.google.com"]:visited {
+            color: red;
+        }
+
+        a[target="_blank"] {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis amet suscipit quo facere hic expedita.
+        Laboriosam perferendis nesciunt ipsam, minus debitis tempora dolores laudantium mollitia porro veritatis!
+        Nulla, nostrum eius.</p>
+
+    <br><br>
+
+    <a class="link1" href="https://www.google.com">GOOGLE'A GİT</a>
+
+    <br><br>
+
+    <img src="img/coder.jpeg" width="50%" alt="Resim bulunamadı" title="bir kadin">
+    <br>
+    <img src="img/laptop.jpg" width="50%" alt="Resim bulunamadı">
+    <br>
+    <img src="img/perfect.jpg" width="50%" alt="Resim bulunamadı">
+
+    <br><br>
+
+    <p title="bu bir paragraftir.">Paragraf 1</p>
+    <p title="bu bir paragraf degildir.">Paragraf 2</p>
+    <p title="bir paragraf">Paragraf 3</p>
+
+    <br><br>
+
+    <a href="https://www.google.com">GOOGLE</a><br>
+    <a href="https://www.youtube.com" target="_blank">YOUTUBE</a>
+
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!-- 
+    ***FLEXBOX***
+    *Float yok
+    *
+    *
+    
+    Emmet -> div.container-1>(div.box>h4(Kutu)+p(lorem10))*3 oluşturuldu
+
+                                  ***CONTAINER (PARENT)***
+
+
+    display: flex                   -> sıralı dizilmeyi sağlar (defaultta column)
+
+    flex-direction: column           -> box'lar alt alta
+                   column-reverse   -> box'lar tersten şekilde alt alta
+                   row              -> box'lar yanyana
+                   row-reverse      -> box'lar tersten yanyana sıralanır 
+    
+    flex-wrap: wrap          -> kutularda taşma olursa aşağı alır 
+               nowrap        -> kutularda taşma olursa aşağı almaz, scroll bar oluşur
+               wrap-reverse  -> kutuların simetrisine göre yer değiştirir-ayna görüntüsü (yataysa alttakiler üste, üsttekiler alta)
+
+    justify-content: flex-start     -> kutular akışın başına yaslanır
+                     flex-end       -> kutular akışın sonuna yaslanır
+                     center         -> kutular merkeze gelir
+                     space-around   -> kutuların çevresinde düzenli boşluk bırakarak sıralanması (ancak baştaki boşluk 1 birim ise kutular arası 2 birim)
+                     space-between  -> kutular sağ ve sola yaslanır ve aralarında düzenli boşluk bırakarak sıralanır
+                     space-evenly   -> kutuların çevresinde düzenli boşluk bırakarak sıralanması (kutular arası hep aynı boşluk-1 birim)
+
+    ****fex-direction: column olduğunda justify-content devreye girmez, girmesi için container'a height verilmeli
+
+
+    direction: row olduğunda;
+    align-items: flex-start         -> dikeyde başa yaslayarak sıralama sağlar
+                 flex-end           -> dikeyde sona yaslayarak sıralama sağlar
+                 strecth            -> dikeyde iki tarafa yaslar 
+                 center             -> merkeze
+    
+    direction: column olduğunda;
+    align-items: flex-start         -> yatayda başa yaslayarak sıralama sağlar
+                 flex-end           -> yatayda sona yaslayarak sıralama sağlar
+                 strecth            -> yatayda iki tarafa yaslar (defaultta)
+                 center             -> merkeze
+
+                                                    *****Kısaca;*****
+
+                direction: row  olduğunda   justify-content   Yatay       align-item    Dikey sıralar
+                direction: column  olduğunda  justify-content   Dikey       align-item    Yatay sıralar
+
+    ***align-item sadece bir satır/sütun olduğunda kullanılır (sadece birinci satır/sütundaki elemanlara etki eder)
+    ***align-content ise birden fazla satır/sütun olduğunda kullanılır (hepsine etki eder)
+
+    flex-flow: row wrap;     -> flex-direction ve flex-wrap birlikte verilebilir
+
+
+                                    ***ELEMANLAR***
+
+    order: 1    -> 1.sırada         -> boxların yerlerinde sıralama sağlar
+           2    -> 2.sırada
+           3    -> 3.sırada
+
+
+    
+    direction: row olduğunda;
+    align-self:  center;        -> dikeyde merkeze alır
+                 flex-start     -> dikeyde başlangıca yasla
+                 flex-end       -> dikeyde sona yasla
+                 stretch        -> dikeyde iki tarafa yasla
+    direction: column olduğunda;
+    align-self:  center;        -> yatayda merkeze alır
+                 flex-start     -> yatayda başlangıca yasla
+                 flex-end       -> yatayda sona yasla
+                 stretch        -> yatayda iki tarafa yasla
+
+
+    flex-basis: 20%;    -> kutuların kaplayacağı alan
+    flex-grow: 1;       -> kutunun büyüklüğünü bozmadan boş kalan alana yayılması (büyümesi)
+        *verdiğin orana göre boşluğu paylaşırlar
+
+    flex-shrink: 0;     -> olmak istediği şekilde olur (büzüşme kapatılır)
+        *eğer arttırılırsa sıkışma özelliği açılır
+    
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container-1 div {
+            border: 1px solid gray;
+            padding: 5px;
+            flex-basis: 25%;
+        }
+
+        /* 
+            row      JC  Yatay       align-item/align-content    Dikey 
+            column   JC  Dikey       align-item/align-content    Yatay  
+        */
+
+
+        .container-1 {
+            height: 700px;
+            border: 1px solid black;
+            display: flex;
+            /* 
+            flex-direction: row;
+            flex-wrap: wrap; 
+            */
+            flex-flow: row nowrap;
+            align-items: flex-start;
+        }
+
+        .box-1 {
+            order: 1;
+            flex-shrink: 4;
+
+        }
+
+        .box-2 {
+            order: 2;
+            flex-shrink: 0;
+
+        }
+
+        .box-3 {
+            order: 3;
+            flex-shrink: 4;
+
+        }
+
+        .box-4 {
+            order: 4;
+            flex-shrink: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-1">
+        <div class="box-1">
+            <h4>Birinci Kutu</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, voluptatum.</p>
+        </div>
+        <div class="box-2">
+            <h4>İkinci Kutu</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, voluptatum.</p>
+        </div>
+        <div class="box-3">
+            <h4>Üçüncü Kutu</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, voluptatum.</p>
+        </div>
+        <div class="box-4">
+            <h4>Dördüncü Kutu</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, voluptatum.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!-- 
+    ***Box-shadow***
+
+        box-shadow: 30px 30px 5 px 5px gray;    (x-ekseni   y-ekseni   blur   yayılma   renk)
+        box-shadow: inset 30px 30px 5 px gray;      -> gölgeyi içeri alır ( ancak yayılma özelliği kullanılmaz)
+        
+        Multiple shadow     -> box-shadow: 30px 30px 5 px 5px gray,
+                                    60px 60px 5px 5px yellow,
+                                    90px 90px 5px 15px purple
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* normal box-shadow */
+        .div1 {
+            height: 400px;
+            width: 400px;
+            background: red;
+            box-shadow: 30px 30px 5px 15px gray,
+                60px 60px 5px 15px yellow,
+                90px 90px 5px 15px purple
+        }
+
+        /* insert box-shadow */
+        .div2 {
+            height: 400px;
+            width: 400px;
+            background: red;
+            box-shadow: inset 50px 50px 55px gray,
+                inset -50px -50px 5px yellow,
+                90px 90px 5px 15px purple
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="div1">
+
+    </div>
+
+    <br><br><br><br><br><br><br><br><br>
+
+    <div class="div2">
+
+    </div>
+
+</body>
+
+</html>

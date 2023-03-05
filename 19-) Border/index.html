@@ -1,0 +1,76 @@
+<!-- 
+    Border-Kenarlık  
+
+    1-) border: 4px solid red 
+
+    div {
+        width: 500px;
+        height: 500px
+        border: 4px solid red 
+        }
+
+    çizgi 1px olsun 
+    katı bir çizgi
+    rengi kırmızı
+    Sonuçta; genişlik ve uzunluk 508px 508px olur (border dahil)
+
+    2-) border-style 
+        solid           -> katı
+        dotted          -> noktalı
+        dashes          -> delikli
+        double          -> çift çizgi
+        groove/ridge    -> alacalı (3 boyutlu gibi)
+        hidden          -> gizli
+
+    3-) border-color
+
+    *3 özellik birlikte de verilebilir
+        border: 5px dotted green gibi
+
+    4-) border-top: none; -> üst çizgi gider
+        border-bottom
+    
+    5-) border-radius: 30px; -> köşeleri yuvarlar
+        -eğer kenarı kadar yarıçap yaparsan daire olur
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            width: 500px;
+            height: 500px;
+            border: 30px solid green;
+            border-style: dashed;
+            border-radius: 50px;
+        }
+
+        .div2 {
+            width: 500px;
+            height: 500px;
+            border: 30px dotted red;
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+
+    </div>
+
+    <div class="div2">
+
+    </div>
+
+</body>
+
+</html>

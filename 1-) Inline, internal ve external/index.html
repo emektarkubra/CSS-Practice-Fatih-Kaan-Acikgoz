@@ -1,0 +1,46 @@
+<!-- 
+    1-) Inline (satır içi) -> Direk Tag içerisinden style oluşturulur
+            Örnek: <p style="color: red;">Lorem, ipsum dolor.</p>
+
+    2-) Internal (Dahili) -> head kısmında style tag'i açılır.
+
+            <head>
+                <style>
+                    body {
+                        background-color: black;
+                    }
+                </style>
+            </head>
+
+    3-) External (Harici) -> ayrı bir css dosyası açılır ve linkle html'e bağlanır 
+        (link:css) -> <link rel="stylesheet" href="style.css"> 
+
+        Eğer aynı klasörde css dosyası içindeyse <link rel="stylesheet" href="css/style.css"> 
+        Eğer başka klasördeyse <link rel="stylesheet" href="../klasör/style.css"> 
+            Yani ../ ile diğer klasörler çağrılır
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p style="color: red;">Lorem, ipsum dolor.</p>
+
+</body>
+
+</html>

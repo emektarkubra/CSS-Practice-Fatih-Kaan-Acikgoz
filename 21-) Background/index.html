@@ -1,0 +1,60 @@
+<!-- 
+    Background
+    
+    1-) background-color: tomato;               -> renk ekleme
+    
+    2-) background-image: url(img/coder.jpeg);  -> resim ekleme
+
+    3-) background-repeat: ;
+            no-repeat   -> resim tekrar etmesin 
+            repeat-x    -> x ekseninde tekrar etsin
+            repeat-y;   -> y ekseninde tekrar etsin
+            round       ->
+
+    4-) background-attachment:
+            fixed       -> aşağı indirsen bile arka plan sabit
+            scroll      -> başlangıç özelliği ile aynı
+
+    5-) background-position:
+            right top       -> sağ üst köşede
+            right bottom    -> sağ aşağı
+
+
+    *Tüm özellikler birlikte de verilebilir
+        Mesela;
+            background: blue url("img/coder.jpg") fixed no-repeat right top;
+
+    6-) background-size: ;
+            cover   -> remi kapla
+            contain -> resmi içer
+            auto    -> otomatik
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: tomato;
+            height: 100px;
+            background-image: url(img/coder.jpeg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: right top;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+
+</html>

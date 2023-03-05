@@ -1,0 +1,173 @@
+<!-- 
+    *Yanyana kutuları yaslamak istiyorsak hepsini float:left yap
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100%;
+            height: 300px;
+            text-align: center;
+
+        }
+
+        #kaanAcademy {
+            font-family: 'Times New Roman', Times, serif;
+            background-image: url(img/kodluyoruz\ amblem.png);
+            background-repeat: initial;
+            text-align: center;
+            height: 300px;
+            width: 100%;
+
+        }
+
+        .kaanAcademyYazi {
+            font-size: 20px;
+            text-shadow: 0px 0px 1px black;
+            color: orangered;
+            background-color: lightgreen;
+            display: block;
+        }
+
+        .kurslarimiz {
+            float: left;
+        }
+
+        .kurslarimiz1 {
+            background-image: url(img/coder.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 300px;
+            width: 33.33%;
+            color: red;
+            float: left;
+
+        }
+
+        .p1 {
+            color: turquoise;
+        }
+
+        .kurslarimiz2 {
+            background-image: url(img/laptop.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 300px;
+            width: 33.33%;
+            color: red;
+            float: left;
+        }
+
+        .p2 {
+            color: green;
+        }
+
+        .kurslarimiz3 {
+            background-image: url(img/perfect.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 300px;
+            width: 33.33%;
+            color: red;
+            float: left;
+        }
+
+        .p3 {
+            color: purple;
+        }
+
+        #Hakkimizda {
+            clear: both;
+            background-color: tomato;
+            height: 330px;
+            width: 100%;
+            color: black;
+        }
+
+        #Hakkimizda img {
+            height: 200px;
+            width: 200px;
+            border: 10px solid black;
+            border-style: dashed;
+            margin-top: 20px;
+        }
+
+        #Hakkimizda p {
+            white-space: pre-line;
+            text-transform: capitalize;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #Hakkimizda p::first-line {
+            font-weight: bold;
+            text-decoration: underline;
+            letter-spacing: 3px;
+        }
+
+        /* MOBİL CİHAZLARA UYUMLU OLMASI İÇİN */
+
+        @media screen and (max-width:992px) {
+
+            .kurslarimiz1,
+            .kurslarimiz2,
+            .kurslarimiz3,
+            .Hakkimizda {
+                width: 100%;
+            }
+
+            #Hakkimizda {
+                margin-top: 900px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="kaanAcademy">
+        <span class="kaanAcademyYazi">Kaan Academy yazılım dünyasında çokça kullanılan teknolojilerini insanlara
+            anlaşılır bir biçimde aktarmayı
+            amaçlamaktadır</span>
+    </div>
+
+    <div class="kurslarimiz">
+
+        <div class="kurslarimiz1">
+            Bir kadın kodlama yapıyor.
+            <p class="p1">Herkes hayatta istediği şekilde kodlama yapabilir.</p>
+        </div>
+
+        <div class="kurslarimiz2">
+            Yazılım için bir laptıp yeterlidir.
+            <p class="p2">Bu bilgisayarlar olmasa biz ne yapacaktık.</p>
+        </div>
+
+        <div class="kurslarimiz3">
+            Güzel bir görsel.
+            <p class="p3">Fotoğraf telefon ve laptop.</p>
+        </div>
+
+    </div>
+
+    <div id="Hakkimizda">
+        <img src="img/kodluyoruz amblem.png" alt=""> <br>
+        <p> Kaan Academy
+            Nice İnsanlar Yetiştirmeye Devam Edecektir.
+        </p>
+
+    </div>
+
+
+</body>
+
+</html>

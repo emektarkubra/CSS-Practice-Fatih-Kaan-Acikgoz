@@ -1,0 +1,114 @@
+<!-- 
+    ÖNCELİK SIRASI 
+ 
+        1-) id (#) 
+        2-) class (.)
+        3-) etiket -> eğer diğerlerinden daha önemli olmasını istiyorsak !important yazılır
+
+    *Eğer bir class verilir ve stil verilirse alt sınıftakilere de uygulanır.
+        Mesela; ul içinde class1'deki stiller li içine de uygulanmış olur
+                <ul class="class1">   
+                    <li></li>
+                    <li></li>
+                </ul>
+    
+    *Bir class'a sahip etiketin altındaki alt sınıflara ayrı ayrı ulaşılabilir.
+        Mesela; .Takimlar1 p {} -> Takimlar1 sınıfına ait p alt sınıfı olan etikete ulaşılır
+                .Takimlar1 p em {} -> Takimlar1 sınıfına ait p alt sınıfının alt sınıfı olan em etiketine ulaşılır
+    
+    * Etiketlerin Specifity'lerine göre öncelik verir.(1 0 0)-(0 1 0)-(0 0 1)
+-->
+
+<ul class=""></ul>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        p {
+            color: black;
+        }
+
+        .futbol {
+            color: red;
+        }
+
+        .basket {
+            color: turquoise;
+        }
+
+        .voleybol {
+            color: blue;
+        }
+
+        #Galatasaray {
+            color: green;
+        }
+
+        .takimlar1 {
+            color: red;
+            background: blue;
+            font-size: 30px;
+        }
+
+        .takimlar1 h2 {
+            color: green;
+        }
+
+        .takimlar1 p {
+            color: white;
+            background: red;
+        }
+
+        .takimlar1 p em {
+            color: blueviolet;
+        }
+
+        #takimlar2 p {
+            color: red;
+        }
+
+        #takimlar2 h2 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Takımlar</h1>
+        <p id="Galatasaray" class="futbol">Galatasaray</p>
+        <p class="futbol">Fenerbahçe</p>
+        <p class="basket">Basket Takımı 1</p>
+        <p class="basket">Basket Takımı 2</p>
+        <p class="voleybol">Voleybol Takımı 1</p>
+        <p class="voleybol">Voleybol Takımı 2</p>
+    </div>
+
+    <br><br><br>
+
+    <div>
+
+        <div class="takimlar1">
+            <h2>Takımlar1</h2>
+            <p><em>Avrupa</em> Galatasaray</p>
+        </div>
+
+        <div id="takimlar2">
+            <h2>Takımlar2</h2>
+            <p>Galatasaray</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

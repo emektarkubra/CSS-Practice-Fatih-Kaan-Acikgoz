@@ -1,0 +1,68 @@
+<!-- ***** z-Index ******
+
+    z-index     -> ön plana çıkmasını saglar
+                   (değer 0'dan itibaren verilir ve z-index'i büyük olan öne çıkar)
+                   **position: relative, absolute ya da fixed olmalı
+
+
+    class {
+            background: green;
+            z-index: 10;
+            position: relative
+        }
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+
+        }
+
+        .green {
+            background: green;
+            z-index: 2;
+            position: relative
+        }
+
+        .red {
+            background: red;
+            position: relative;
+            z-index: 1;
+            margin-top: -50px;
+            margin-left: 50px;
+        }
+
+        .yellow {
+            background: yellow;
+            position: fixed;
+            z-index: 3;
+            top: 0;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="green">
+
+    </div>
+    <div class="red">
+
+    </div>
+    <div class="yellow">
+
+    </div>
+
+</body>
+
+</html>

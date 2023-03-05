@@ -1,0 +1,62 @@
+<!-- 
+    a {
+        text-decoration: none;                  -> defulttaki özellikler gitsin diye (özellikle alt çizgi)
+        color: black;
+        transition: color 0.5sn linear;         -> 0.5 sn sonra renkte değişimi gözlenir
+    }
+
+    a:link {                -> normalde linkin nasıl görüneceği
+        color: red;
+    }
+
+    a:visited {             -> tıkladıktan sonra
+        color: purple;
+    }
+
+     a:hover {              -> üzerine geldiğinde
+        color: green;
+    }
+
+
+    ****Hover ı alta alırsan hem tıklamadan önce hem de tıkladıktan sonra renk değişimi olur
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+            transition: color 0.5sn linear;
+            font-size: 32px;
+        }
+
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        a:hover {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="https://www.kaanacademy.com" target="_blank">Kaan Academy</a> <br>
+    <a href="http://www.kaanacademy.com" target="_blank">Kaan Academy</a>
+
+</body>
+
+</html>

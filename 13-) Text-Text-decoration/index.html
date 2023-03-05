@@ -1,0 +1,81 @@
+<!-- 
+    Text-decoration (aynı anda kullanılabilir ve renk verilebilir)
+
+        Mesela; 
+        
+            .p3 {
+                text-decoration: underline overline blue; 
+            }
+
+        line-through    -> metni çizme
+        overline        -> üstünü çizme
+        underline       -> altını çizme
+        dashes          ->
+        dotted          -> noktalı çizme
+        double          -> 
+        none            -> hiç     
+        solid           ->
+        wavy            -> dalgalı
+
+    *Girinti yapmak için (satırbaşı) -> text-indent: 100px;
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p1 {
+            text-decoration: line-through;
+        }
+
+        .p2 {
+            text-decoration: overline dotted red;
+        }
+
+        .p3 {
+            text-decoration: underline overline blue;
+        }
+
+        .kaanAcademy {
+            text-decoration: underline wavy purple;
+        }
+
+        a {
+            text-decoration: none;
+            color: red;
+        }
+
+        .alticiz {
+            text-decoration: underline;
+            color: green;
+        }
+
+        .p4 {
+            text-indent: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="p1">Lorem ipsum dolor sit amet.</p>
+    <p class="p2">Lorem ipsum dolor sit amet.</p>
+    <p class="p3">Lorem ipsum dolor sit amet.</p>
+    <p> <span class="kaanAcademy">Kaan Academy'de</span> aradığınız eğitimi bulacaksınız.</p>
+    <a href="https://www.google.com">GOOGLE'A GİT</a>
+    <br><br>
+    <a class="alticiz" href="https://www.youtube.com">YOUTUBE'A GİT</a>
+    <br><br>
+    <p class="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nulla odio totam numquam! Iure
+        laborum dolores quidem odit, sapiente obcaecati.</p>
+
+
+</body>
+
+</html>

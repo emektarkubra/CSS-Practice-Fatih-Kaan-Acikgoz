@@ -1,0 +1,70 @@
+<!-- 
+    p {
+     display: inline;           -> inline elemet yapar
+              block             -> block element yapar
+              inline-block      -> inline olacak ancak block özelliğide kullancak (mesela aralarına genişlik verme)
+    } 
+
+
+    body {              
+            display: none;      -> sayfada hepsi yok olur
+        }
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width: 50%;
+            border: 1px solid red;
+            display: inline;
+        }
+
+        span {
+            border: 1px solid red;
+            display: block;
+            width: 400px;
+            text-align: center;
+        }
+
+        div {
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+</head>F
+
+<body>
+    <div>Kaan Academy</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+    <br><br><br>
+    <p>
+        Kaan Academy
+    </p>
+
+    <p>
+        İstanbul
+    </p>
+
+    <p>
+        Ankara
+    </p>
+
+    <span>Kırmızı</span>
+    <span>Sarı</span>
+    <span>Mor</span>
+
+</body>
+
+</html>

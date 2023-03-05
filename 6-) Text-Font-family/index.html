@@ -1,0 +1,64 @@
+<!-- 
+        font-family: 'Courier New', Courier, monospace; (3 tane font geliyor)
+
+            Eğer browser ilk fontu desteklemiyorsa, diğer ikisini dener.
+                -family-name -> "times", "courier", "arial", etc.
+                -generic-family ->"serif", "sans-serif", "cursive", "fantasy", "monospace". (tarayınının içerisinde hepsi mevcut)
+        
+        Google font -> Roboto -> Özellikleri seç -> head kısmına linki yapıştır ve css'i yapıştır
+    
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .serif {
+            font-family: serif;
+        }
+
+        .sans-serif {
+            font-family: sans-serif;
+        }
+
+        .cursive {
+            font-family: cursive;
+        }
+
+        .fantasy {
+            font-family: fantasy;
+        }
+
+        .monospace {
+            font-family: monospace;
+        }
+
+        .roboto {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="serif">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+    <p class="sans-serif">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+    <p class="cursive">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+    <p class="fantasy">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+    <p class="monospace">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+    <br><br>
+    <p class="roboto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, illo!</p>
+
+</body>
+
+</html>
